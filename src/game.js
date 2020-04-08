@@ -2,7 +2,7 @@ class Game {
   constructor() {
     // this.start = false
     // this.finished = false
-    // this.obstacles = []
+    this.obstacles = []
   }
 
   init() {
@@ -18,6 +18,12 @@ class Game {
     clear()
     this.background.display()
     this.player.display()
+    if (frameCount % 60 === 0) {
+      this.obstacles.push(new Obstacles())
+    }
+    this.obstacles.forEach(obstacle => {
+      obstacle.draw()
+    })
   }
 
 }
