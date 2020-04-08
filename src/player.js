@@ -1,12 +1,12 @@
 class Player {
     constructor() {
-        this.img = loadImage("../assets/Idle (1).png")
+        this.img = loadImage("../assets/run-yes.gif")
         this.gravity = 0.2
         this.speed = 0
     }
 
     setup() {
-        this.img.resize(50, 0)
+        this.img.resize(80, 0)
         this.height = this.img.height
         this.width = this.img.width
         this.x = 5
@@ -24,6 +24,6 @@ class Player {
         if (this.y > height - this.height) {
             this.y = height - this.height;
           }
-        image(this.img, this.x, this.y - 5)
+        image(this.img, this.x, this.y + 10)
     }
 }
