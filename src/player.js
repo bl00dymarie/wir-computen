@@ -16,6 +16,9 @@ class Player {
     jump() {
         this.speed = -5
     }
+    jumpHigh() {
+        this.speed = -15
+    }
 
     display() {
         this.speed += this.gravity

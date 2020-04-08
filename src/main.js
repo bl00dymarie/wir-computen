@@ -23,9 +23,12 @@ function draw() {
 }
 
 function keyPressed() {
-  let spaceBarCode = 32
+  const spaceBarCode = 32
   if (keyCode === spaceBarCode) {
     game.player.jump()
+  }
+  if (keyCode === 53) {
+    game.player.jumpHigh()
   }
 }
 
