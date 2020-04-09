@@ -2,7 +2,7 @@ class Game {
   constructor() {
     // this.start = false
     // this.finished = false
-    this.obstacles = []
+    this.treasures = []
   }
 
   init() {
@@ -19,10 +19,10 @@ class Game {
     this.background.display()
     this.player.display()
     if (frameCount % 60 === 0) {
-      this.obstacles.push(new Obstacles())
+      this.treasures.push(new Treasures())
     }
-    this.obstacles.forEach(obstacle => {
-      obstacle.draw()
+    this.treasures.forEach(treasure => {
+      treasure.draw()
     })
   }
 

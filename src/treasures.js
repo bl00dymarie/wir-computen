@@ -1,4 +1,4 @@
-class Obstacles {
+class Treasures {
     constructor() {
         this.height = 25
         this.width = 25
