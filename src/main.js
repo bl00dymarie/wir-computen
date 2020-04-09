@@ -13,7 +13,15 @@ function draw() {
   
   // if (game.start) {
   frameRate(40)
+  if (frameCount >= 2400) {
+    text("END", 10, 30)
+    return 
+  }
   game.display()
+  let math = 2440
+  math -= frameCount
+  let counter = Math.floor(math / 40)
+  text(counter, 10, 30)
   // } else {
   //   fill ('orange')
   //   rect(0,0,544,600)

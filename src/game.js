@@ -3,6 +3,7 @@ class Game {
     // this.start = false
     // this.finished = false
     this.treasures = []
+    this.score = 0
   }
 
   init() {
@@ -25,11 +26,14 @@ class Game {
     this.treasures.forEach(treasure => {
       treasure.draw()
     })
+    // as soon as you hit treasures you want to get rid out of the array filter method; pull it out of the array
     this.treasures.forEach(treasure => {
-      console.log("Here we are checkin every treasure")
-      console.log(treasure.checkCollision(this.player))
+      if (treasure.checkCollision(this.player)) {
+        this.score += 10
+        this.treasures.splice(this.treasures.indexOf(treasure), 1)
+      } 
     })
+    document.querySelector('h2 span').innerHTML = this.score
   }
 
 }
-  
