@@ -1,6 +1,6 @@
 class Player {
     constructor() {
-        this.img = loadImage("../assets/run-yes.gif")
+        this.img = loadImage("assets/run-yes.gif")
         this.gravity = 0.2
         this.speed = 0
     }
