@@ -14,8 +14,14 @@ class Treasures {
         let xCollision = 
             (leftOfTreasure > leftOfPlayer && leftOfTreasure < rightOfPlayer) ||
             (rightOfTreasure > leftOfPlayer && rightOfTreasure < rightOfPlayer)
-        // let yCollision = (this.y < player.y + player.height && this.y + this.height > player.y)
-        if (xCollision) {
+        let topOfTreasure = this.y
+        let bottomOfTreasure = this.y + this.height
+        let topOfPlayer = player.y
+        let bottomOfPlayer = player.y + player.height
+        let yCollision =
+            (topOfTreasure > topOfPlayer && topOfPlayer < bottomOfPlayer) ||
+            (bottomOfTreasure < bottomOfPlayer && bottomOfTreasure > topOfPlayer)
+        if (xCollision && yCollision) {
             return true
         }
     }
