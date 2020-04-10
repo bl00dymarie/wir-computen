@@ -6,7 +6,7 @@ class Player {
     }
 
     setup() {
-        this.img.resize(80, 0)
+        this.img.resize(50, 0)
         this.height = this.img.height
         this.width = this.img.width
         this.x = 5
