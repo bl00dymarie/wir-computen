@@ -1,5 +1,6 @@
 class Treasures {
     constructor() {
+        this.img = loadImage("assets/banani.png")
         this.height = 20
         this.width = 20
         this.x = width
@@ -28,7 +29,6 @@ class Treasures {
 
     draw() {
         this.x--
-        fill("pink")
-        rect(this.x, this.y, this.width, this.height)
+        image(this.img, this.x, this.y, this.width, this.height)
     }
 }
