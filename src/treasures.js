@@ -1,8 +1,8 @@
 class Treasures {
     constructor() {
         this.img = loadImage("assets/banani.png")
-        this.height = 20
         this.width = 20
+        this.height = 13
         this.x = width
         this.y = random(0, height - this.height)
     }
