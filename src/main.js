@@ -1,6 +1,7 @@
 let game = new Game();
 
 function preload() {
+  fontRegular = loadFont('assets/Marvel-Regular.ttf');
   game.init()
 }
 
@@ -14,14 +15,18 @@ function draw() {
   // if (game.start) {
   frameRate(40)
   if (frameCount >= 2400) {
-    text("END", 10, 30)
+    textFont(fontRegular)
+    textSize(20)
+    text("END", 30, 30)
     return 
   }
   game.display()
   let math = 2440
   math -= frameCount
   let counter = Math.floor(math / 40)
-  text(counter, 10, 30)
+  textSize(20)
+  textFont(fontRegular)
+  text(counter, 30, 30)
   // } else {
   //   fill ('orange')
   //   rect(0,0,544,600)

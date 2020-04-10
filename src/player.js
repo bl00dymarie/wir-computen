@@ -9,7 +9,7 @@ class Player {
         this.img.resize(50, 0)
         this.height = this.img.height
         this.width = this.img.width
-        this.x = 50
+        this.x = 30
         this.y = height - this.height
     }
 
